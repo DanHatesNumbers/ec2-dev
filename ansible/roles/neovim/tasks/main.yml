@@ -8,7 +8,6 @@
     state: latest
   become: yes
   with_items:
-    - ninja-build
     - libtool
     - autoconf
     - automake
