@@ -1,0 +1,11 @@
+---
+- hosts: all
+  roles:
+    - zsh
+    - tmux
+    - mosh
+    - htop
+    - rust
+    - noevim
+    - packer
+    - ansible
