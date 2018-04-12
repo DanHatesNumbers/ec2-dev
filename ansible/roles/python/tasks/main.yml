@@ -7,3 +7,4 @@
     - python36
     - python27-pip
     - python36-pip
+  become: yes
