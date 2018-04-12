@@ -2,4 +2,4 @@
   yum:
     name: htop
     state: latest
-become: yes
+  become: yes
