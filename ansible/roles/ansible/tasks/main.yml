@@ -1,0 +1,9 @@
+- name: Install Python
+  include_role:
+    name: python
+
+- name: Install Ansible
+  pip:
+    executable: pip-2.7
+    name: ansible
+  become: yes
