@@ -6,26 +6,23 @@
 - name: Run Rustup installer
   command: sh ~/rustup.sh -y
 
-- name: Source bash_profile
-  command: source ~/.bash_profile
-
 - name: Add toolchains
-  command: rustup install {{ item }}
+  command: ~/.cargo/bin/rustup install {{ item }}
   with_items:
     - stable
     - nightly
 
 - name: Make stable toolchain default
-  command: rustup default stable
+  command: ~/.cargo/bin/rustup default stable
 
 - name: Add rust stable components
-  command: rustup component add {{ item }} --toolchain stable
+  command: ~/.cargo/bin/rustup component add {{ item }} --toolchain stable
   with_items:
     - rls-preview
     - rust-analysis
     - rust-src
 
 - name: Install Racer
-  command: cargo install racer
+  command: ~/.cargo/bin/cargo install racer
   args:
     creates: ~/.cargo/bin/racer
