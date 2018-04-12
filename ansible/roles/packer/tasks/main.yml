@@ -5,6 +5,6 @@
 
 - name: Unpack Packer
   unarchive:
-    src: packer_1.2.2_linux_amd64.zip
+    src: ~/packer_1.2.2_linux_amd64.zip
     dest: ~/
     remote_src: yes
