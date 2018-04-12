@@ -6,6 +6,6 @@
     - mosh
     - htop
     - rust
-    - noevim
+    - neovim
     - packer
     - ansible
