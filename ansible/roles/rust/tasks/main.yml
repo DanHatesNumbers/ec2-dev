@@ -1,15 +1,10 @@
-- name: Create temp file for Rustup
-  tempfile:
-    state: file
-  register: rustup_temp
-
 - name: Download Rustup to temp file
   get_url: 
     url: https://sh.rustup.rs
-    dest: "{{ rustup_temp.path }}"
+    dest: ~/rustup.sh
 
 - name: Run Rustup installer
-  command: sh {{ rustup_temp.path }} -y
+  command: sh ~/rustup.sh -y
 
 - name: Add toolchains
   command: rustup install {{ item }}
