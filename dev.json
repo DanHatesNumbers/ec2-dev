@@ -17,6 +17,7 @@
     }],
     "provisioners": [{
         "type": "ansible",
-        "playbook_file": "./ansible/baseline.yml"
+        "playbook_file": "./ansible/baseline.yml",
+        "extra_arguments": ["-vvvv"]
     }]
 }
