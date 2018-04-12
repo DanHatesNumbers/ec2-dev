@@ -1,0 +1,50 @@
+- name: Install Python
+  include_role:
+    name: python
+
+- name: Install build deps
+  yum:
+    name: "{{ item }}"
+    state: latest
+  become: yes
+  with_items:
+    - ninja-build
+    - libtool
+    - autoconf
+    - automake
+    - cmake
+    - gcc
+    - gcc-c++
+    - make
+    - pkgconfig
+    - unzip
+
+- name: Clone Neovim Source
+  git:
+    repo: https://github.com/neovim/neovim.git
+    dest: ~/neovim-src
+    clone: yes
+    version: nightly
+
+- name: Build Neovim
+  make:
+    chdir: ~/neovim-src
+  environment: CMAKE_BUILD_TYPE=Release
+
+- name: Install Neovim
+  make:
+    chdir: ~/neovim-src
+    target: install
+  become: yes
+
+- name: Install Python2 Module
+  pip:
+    executable: pip-2.7
+    name: neovim
+  become: yes
+
+- name: Install Python3 Module
+  pip:
+    executable: pip-3.6
+    name: neovim
+  become: yes

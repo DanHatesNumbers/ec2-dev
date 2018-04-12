@@ -1,0 +1,9 @@
+- name: Install Python 2.7 and Python 3.6
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - python27
+    - python36
+    - python27-pip
+    - python36-pip
