@@ -6,7 +6,7 @@
             "filters": {
                 "virtualization-type": "hvm",
                 "name": "amzn-ami-hvm*-ebs",
-                "root-device": "ebs"
+                "root-device-type": "ebs"
             },
             "owners": ["137112412989"],
             "most_recent": true
