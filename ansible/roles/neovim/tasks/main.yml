@@ -34,7 +34,7 @@
 - name: Install Neovim
   command: make install
   args:
-    chdir: ~/neovim-src
+    chdir: /home/ec2-user/neovim-src
   become: yes
 
 - name: Install Python2 Module
