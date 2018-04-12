@@ -14,5 +14,9 @@
         "instance_type": "t2.micro",
         "ssh_username": "ec2-user",
         "ami_name": "packer-example {{isotime | clean_ami_name}}"
+    }],
+    "provisioners": [{
+        "type": "ansible",
+        "playbook_file": "./ansible/baseline.yml"
     }]
 }
