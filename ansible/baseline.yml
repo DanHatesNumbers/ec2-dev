@@ -3,7 +3,7 @@
   roles:
     - zsh
     - tmux
-    - mosh
+    - ssh
     - htop
     - rust
     - neovim
