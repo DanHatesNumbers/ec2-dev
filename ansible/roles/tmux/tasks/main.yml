@@ -2,4 +2,4 @@
   yum:
     name: tmux
     state: latest
-become: yes
+  become: yes
