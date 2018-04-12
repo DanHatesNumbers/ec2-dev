@@ -30,4 +30,4 @@
 - name: Install Racer
   command: cargo install racer
   args:
-creates: ~/.cargo/bin/racer
+    creates: ~/.cargo/bin/racer
