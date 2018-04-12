@@ -28,7 +28,8 @@
 - name: Build Neovim
   make:
     chdir: ~/neovim-src
-  environment: CMAKE_BUILD_TYPE=Release
+  environment: 
+    CMAKE_BUILD_TYPE: Release
 
 - name: Install Neovim
   make:
