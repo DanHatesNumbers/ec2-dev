@@ -1,5 +1,5 @@
 - name: Install Tmux
-  dnf:
+  yum:
     name: tmux
     state: latest
 become: yes
