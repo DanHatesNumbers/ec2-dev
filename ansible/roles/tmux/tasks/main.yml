@@ -1,0 +1,5 @@
+- name: Install Tmux
+  dnf:
+    name: tmux
+    state: latest
+become: yes
