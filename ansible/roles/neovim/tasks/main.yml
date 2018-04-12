@@ -33,6 +33,7 @@
 
 - name: Install Neovim
   command: make install
+  args:
     chdir: ~/neovim-src
   become: yes
 
