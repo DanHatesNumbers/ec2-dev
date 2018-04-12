@@ -6,6 +6,9 @@
 - name: Run Rustup installer
   command: sh ~/rustup.sh -y
 
+- name: Source bash_profile
+  command: source ~/.bash_profile
+
 - name: Add toolchains
   command: rustup install {{ item }}
   with_items:
