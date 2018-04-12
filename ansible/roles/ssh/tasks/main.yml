@@ -6,7 +6,7 @@
 
 - name: Harden SSH Server Configuration (Mozilla Modern)
   copy:
-    src: ~/dotfiles/ssh/sshd_config
+    src: ../files/sshd_config
     dest: /etc/ssh/sshd_config
   become: yes
 
@@ -22,6 +22,6 @@
 
 - name: Authorized Keys
   copy:
-    src: files/authorized_keys
+    src: ../files/authorized_keys
     dest: ~/.ssh/authorized_keys
   mode: 600
