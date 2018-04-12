@@ -32,9 +32,8 @@
     CMAKE_BUILD_TYPE: Release
 
 - name: Install Neovim
-  make:
+  command: make install
     chdir: ~/neovim-src
-    target: install
   become: yes
 
 - name: Install Python2 Module
