@@ -24,4 +24,4 @@
   copy:
     src: ../files/authorized_keys
     dest: ~/.ssh/authorized_keys
-  mode: 600
+    mode: 600
