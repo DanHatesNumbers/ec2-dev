@@ -2,6 +2,7 @@
 - hosts: all
   roles:
     - system
+    - geerlingguy.repo-epel
     - git
     - zsh
     - tmux
@@ -11,3 +12,6 @@
     - rust
     - packer
     - ansible
+  vars:
+    - epel_repo_url: "https://mirrors.ukfast.co.uk/sites/dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+    - epel_repo_gpg_key_url: "/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7"

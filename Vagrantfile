@@ -72,5 +72,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "ansible/baseline.yml"
     ansible.install_mode = "pip"
+    ansible.galaxy_role_file = "galaxy_roles.yml"
   end
 end
