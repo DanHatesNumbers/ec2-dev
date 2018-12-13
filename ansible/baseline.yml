@@ -2,7 +2,7 @@
 - hosts: all
   roles:
     - system
-    - geerlingguy.repo-epel
+    - { name: geerlingguy.repo-epel, become: yes }
     - git
     - zsh
     - tmux
