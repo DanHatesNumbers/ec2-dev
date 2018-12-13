@@ -3,8 +3,8 @@
     name: "{{ item }}"
     state: latest
   with_items:
-    - python27
-    - python36
-    - python27-pip
-    - python36-pip
+    - python
+    - python3
+    - python2-pip
+    - python3-pip
   become: yes
