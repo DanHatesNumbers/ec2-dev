@@ -1,0 +1,10 @@
+- name: Update packages
+  yum:
+    name: '*'
+    state: latest
+
+- name: Add EPEL
+  yum_repository:
+    name: epel
+    description: EPEL YUM repo
+    baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
