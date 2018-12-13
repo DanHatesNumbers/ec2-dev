@@ -11,3 +11,8 @@
     description: EPEL YUM repo
     baseurl: https://download.fedoraproject.org/pub/epel/7/$basearch/
   become: yes
+
+- name: Install EPEL GPG Key
+  rpm_key:
+    state: present
+    key: https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
