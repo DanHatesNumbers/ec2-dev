@@ -25,3 +25,5 @@
     src: ../files/authorized_keys
     dest: ~/.ssh/authorized_keys
     mode: 600
+  tags:
+    - ssh_keys

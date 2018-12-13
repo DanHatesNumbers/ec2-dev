@@ -73,5 +73,6 @@ Vagrant.configure("2") do |config|
     ansible.playbook = "ansible/baseline.yml"
     ansible.install_mode = "pip"
     ansible.galaxy_role_file = "galaxy_roles.yml"
+    ansible.skip_tags = "ssh_keys"
   end
 end
